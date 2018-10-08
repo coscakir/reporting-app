@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/transactions', function () {
-    return view('transactions');
-});
+Route::post('/', 'ReportingController@merchantLogin');
+
+Route::get('/transactions', 'ReportingController@getTransactions');
+
+Route::get('/transaction', 'ReportingController@getTransactionDetail');
+
+Route::get('/client', 'ReportingController@getClientDetail');

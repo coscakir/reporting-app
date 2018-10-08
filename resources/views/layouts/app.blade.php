@@ -14,6 +14,7 @@
     </header>
 
     <main role="main" class="container">
+       @include("inc.messages")
         @yield("content")
     </main>
     
