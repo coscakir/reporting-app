@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::post('/', 'ReportingController@merchantLogin');
+Route::post('/login', 'ReportingController@merchantLogin');
 
 Route::get('/dashboard', 'ReportingController@getDashboardData');
 
