@@ -12,10 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('login');
 });
 
 Route::post('/', 'ReportingController@merchantLogin');
+
+Route::get('/dashboard', 'ReportingController@getDashboardData');
+
+Route::get('/logout', 'ReportingController@merchantLogout');
 
 Route::get('/transactions', 'ReportingController@getTransactions');
 
